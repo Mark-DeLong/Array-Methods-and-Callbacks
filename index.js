@@ -63,9 +63,6 @@ function getWinners(getFinalsCB) {
     return winners
 }
 
-
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Implement a higher-order function called `getWinnersByYear` that accepts the following parameters and returns a set of strings "In {year}, {country} won the world cup!" 
 
@@ -74,8 +71,15 @@ Parameters:
  * callback function getYears
  */
 
-function getWinnersByYear(/* code here */) {
-    /* code here */
+function getWinnersByYear(data, getWinnersCB, getYearsCB) {
+    const winners = getWinnersCB(data)
+    const years = getYearsCB(data)
+    const all = []
+
+    winners.forEach(function(item, index) {
+        all.push(`In ${item}, ${years[index]} won the world cup!`)
+    })
+    return all
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
