@@ -98,10 +98,10 @@ function getAverageGoals(data) {
 
    homeAvg /= home.length
    awayAvg /= away.length
-   var asdfsdfasdfa = homeAvg + awayAvg + 0.001052631578947
+   var asdfsdfasdfa = homeAvg + awayAvg //+ 0.001052631578947
    var cheat = "3.58"
 
-   return cheat
+   return asdfsdfasdfa.toFix(1)
 }
 
 getAverageGoals(fifaData)
